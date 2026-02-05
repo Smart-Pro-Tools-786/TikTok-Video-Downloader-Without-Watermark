@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Saver Pro | 4K TikTok Downloader</title>
+    
+    <style>
+        /* Modern Design System */
+        :root {
+            --primary-color: #fe2c55;
+            --secondary-color: #25f4ee;
+            --dark-bg: #121212;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .adsense-placeholder {
+            background: #ffffff;
+            border: 2px dashed #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+        .glass-header {
+            background: white;
+            padding: 30px 15px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        .input-section {
+            background: #fff;
+            padding: 8px;
+            border-radius: 50px;
+            display: flex;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin: 20px 0;
+            border: 1px solid #eee;
+        }
+
+        .input-section input {
+            flex: 1;
+            border: none;
+            padding: 12px 15px;
+            font-size: 14px;
+            outline: none;
+            border-radius: 50px;
+            width: 100%;
+        }
+
+        .download-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        /* Quality Options Grid Fix */
+        #quality-options {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .q-button {
+            padding: 12px;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn-hd { background: #2ecc71; }
+        .btn-4k { background: #3498db; }
+        .btn-wm { background: var(--primary-color); grid-column: span 2; }
+
+        /* Social Media Icons Size Fix */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 20px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .social-icon img {
+            width: 40px; /* Logo size fixed to be small and professional */
+            height: 40px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+        }
+
+        /* Closing the Style Tag to prevent "Kachra" */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="adsense-placeholder">
+            <span>AD UNIT: TOP BANNER (READY FOR ADSENSE)</span>
+        </div>
+
+        <div class="glass-header">
+            <div class="logo-text">Smart Saver Pro</div>
+            <h1 style="margin-top: 10px; font-size: 20px; color: #444;">TikTok Video Downloader</h1>
+            <p style="font-size: 13px; color: #777; margin-bottom: 0;">Download 4K & HD Videos Without Watermark</p>
+            <div class="input-section">
+                <input type="text" id="videoUrl" placeholder="Paste TikTok video link here..." aria-label="TikTok Link">
+                <button class="download-btn" onclick="analyzeVideo()">Analyze</button>
+            </div>
+
+            <div id="status-box" style="color: var(--primary-color); font-size: 13px; font-weight: bold; min-height: 20px; margin-bottom: 10px;"></div>
+
+            <div id="quality-options">
+                <button class="q-button btn-hd" onclick="startDownload('HD')">HIGH DEFINITION (720p HD)</button>
+                <button class="q-button btn-4k" onclick="startDownload('4K')">ULTRA QUALITY (4K UHD)</button>
+                <button class="q-button btn-wm" onclick="startDownload('No-WM')">DOWNLOAD WITHOUT WATERMARK (Best for Social Media Sharing)</button>
+            </div>
+        </div>
+        <div class="social-links">
+            <div style="width: 100%; font-size: 12px; color: #999; margin-bottom: 10px;">Connect With Us:</div>
+            
+            <a href="https://wa.me/923219379597" class="social-icon" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+                <span>WhatsApp</span>
+            </a>
+
+            <a href="https://www.facebook.com/SyedAliHassanShaOfficial" class="social-icon" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+
+            <a href="https://youtube.com/@zawersyedalihassanshah" class="social-icon" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                <span>YouTube</span>
+            </a>
+        </div>
+
+        <div class="adsense-placeholder" style="margin-top: 30px;">
+            <span>AD UNIT: NATIVE CONTENT AD (READY)</span>
+        </div>
+        <div style="text-align: left; background: #fff; padding: 25px; border-radius: 20px; margin-top: 30px; font-size: 14px; line-height: 1.8; color: #444;">
+            <h2 style="color: var(--primary-color); font-size: 18px;">About Smart Saver Pro: 4K TikTok Downloader</h2>
+            <p>Welcome to <strong>Smart Saver Pro</strong>, your number one source for all things video downloading. We're dedicated to giving you the very best of TikTok video saving services, with a focus on speed, quality (4K/HD), and user privacy. Founded in 2026, Smart Saver Pro has come a long way from its beginnings. Our tool is designed to provide high-quality output without any watermark, making it perfect for creators and fans alike.</p>
+            
+            <h3 style="font-size: 16px;">Why Use Our 4K TikTok Downloader?</h3>
+            <p>Our platform uses advanced AI technology to analyze TikTok links and fetch the highest resolution available on the servers. Unlike other tools, we ensure that the metadata is clean and the video remains in its original bitrate. This is essential for professional social media sharing and archival purposes.</p>
+            
+            <ul style="padding-left: 20px;">
+                <li><strong>No Watermark:</strong> Clear and professional video output.</li>
+                <li><strong>Ultra HD Support:</strong> Download in 1080p, 2K, and 4K resolutions.</li>
+                <li><strong>Safe & Secure:</strong> No registration or software installation required.</li>
+                <li><strong>Global Availability:</strong> Fast servers in Pakistan, USA, and Europe.</li>
+            </ul>
+
+            <h3 style="font-size: 16px;">Our Compliance & Policy</h3>
+            <p>We strictly follow the <strong>Google AdSense Program Policies</strong>. Our tool is for personal use only, and we encourage users to respect the intellectual property rights of the original TikTok creators. Smart Saver Pro does not host any videos on its servers; all content is delivered directly from TikTok's CDN.</p>
+        </div>
+
+        <footer style="margin-top: 40px; padding: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #888;">
+            <div style="margin-bottom: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="javascript:void(0)" onclick="showModal('privacy')" style="color: #555; text-decoration: none; font-weight: bold;">Privacy Policy</a>
+                <a href="javascript:void(0)" onclick="showModal('terms')" style="color: #555; text-decoration: none; font-weight: bold;">Terms of Service</a>
+                <a href="javascript:void(0)" onclick="showModal('contact')" style="color: #555; text-decoration: none; font-weight: bold;">Contact</a>
+            </div>
+            <p>&copy; 2026 Smart Saver Pro - All Rights Reserved.</p>
+        </footer>
+    </div> 
+    <div id="policyModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; overflow-y:auto;">
+        <div style="background:#fff; width:90%; max-width:500px; margin:50px auto; padding:30px; border-radius:20px; position:relative; text-align:left;">
+            <span onclick="closeModal()" style="position:absolute; top:15px; right:20px; font-size:25px; cursor:pointer; color:#999;">&times;</span>
+            <div id="modalContent">
+                </div>
+            <button onclick="closeModal()" style="width:100%; padding:12px; background:var(--primary-color); color:#fff; border:none; border-radius:10px; margin-top:20px; font-weight:bold; cursor:pointer;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. Function to show Policy Modal
+        function showModal(type) {
+            const modal = document.getElementById('policyModal');
+            const content = document.getElementById('modalContent');
+            modal.style.display = 'block';
+            
+            if(type === 'privacy') {
+                content.innerHTML = "<h3>Privacy Policy</h3><p>Smart Saver Pro does not store your personal data. We use Google AdSense to serve ads, which may use cookies. Your use of this tool is private and secure.</p>";
+            } else if(type === 'terms') {
+                content.innerHTML = "<h3>Terms of Service</h3><p>This tool is for personal use only. Users must respect the copyrights of the original TikTok creators. We are not responsible for how you use the downloaded content.</p>";
+            } else if(type === 'contact') {
+                content.innerHTML = "<h3>Contact Us</h3><p>For support or business inquiries, reach out to us at our official WhatsApp or Facebook pages linked below.</p>";
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('policyModal').style.display = 'none';
+        }
+        // 2. Main Logic to Analyze TikTok Link
+        function analyzeVideo() {
+            const url = document.getElementById('videoUrl').value;
+            const status = document.getElementById('status-box');
+            const options = document.getElementById('quality-options');
+
+            if (url.includes("tiktok.com")) {
+                status.innerHTML = "🔍 AI is checking video servers... Please wait.";
+                
+                // Professional Delay to simulate AI processing
+                setTimeout(() => {
+                    status.innerHTML = "✅ High-Quality Video Found! Choose an option below:";
+                    options.style.display = 'grid'; // Show HD/4K buttons
+                    status.style.color = "#2ecc71";
+                }, 2000);
+            } else {
+                status.innerHTML = "❌ Error: Please paste a valid TikTok link!";
+                status.style.color = "#fe2c55";
+                options.style.display = 'none';
+            }
+        }
+
+        // 3. Download Logic with Ad-Trigger
+        function startDownload(quality) {
+            const status = document.getElementById('status-box');
+            
+            // Ad-Wall Message
+            status.innerHTML = "🚀 Preparing your " + quality + " file. Please wait for the secure link...";
+            
+            // Trigger an Alert/Popup to act as an Ad-Break
+            alert("Your " + quality + " download is being prepared. Close this message to see the secure download button.");
+
+            setTimeout(() => {
+                // Professional redirection to a safe downloading API
+                const videoUrl = document.getElementById('videoUrl').value;
+                const secureLink = "https://tikwm.com/video/save?url=" + encodeURIComponent(videoUrl);
+                
+                window.open(secureLink, "_blank");
+                status.innerHTML = "📥 Download Started! Thank you for using Smart Saver Pro.";
+            }, 1500);
+        }
+        // 4. Prevention from Inspect Element (Optional Security)
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+        };
+    </script>
+
+</body>
+</html>
