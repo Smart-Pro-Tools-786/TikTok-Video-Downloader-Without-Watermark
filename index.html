@@ -20,129 +20,24 @@
             --dark-bg: #050505;
             --card-bg: rgba(20, 20, 20, 0.8);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            user-select: none;
-        }
-
-        body {
-            background: var(--dark-bg);
-            color: #ffffff;
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Smooth Scroll */
+        * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+        body { background: var(--dark-bg); color: #ffffff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         html { scroll-behavior: smooth; }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 10px; }
-
-        .smart-gradient-text {
-            background: linear-gradient(to right, var(--cyan), var(--blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .neo-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border-radius: 40px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-        .glow-button {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
-        }
-
-        .glow-button:hover {
-            box-shadow: 0 0 40px rgba(0, 242, 255, 0.5);
-            transform: scale(1.02);
-        }
-
-        .glow-button:active {
-            transform: scale(0.98);
-        }
-
-        .ad-slot {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px dashed rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            position: relative;
-        }
-
-        .ad-slot::before {
-            content: 'ADVERTISEMENT';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background: #050505;
-            padding: 0 10px;
-            font-size: 8px;
-            color: #444;
-            letter-spacing: 2px;
-        }
-
-        /* Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
+        .smart-gradient-text { background: linear-gradient(to right, var(--cyan), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .neo-card { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border-radius: 40px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .glow-button { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); }
+        .glow-button:hover { box-shadow: 0 0 40px rgba(0, 242, 255, 0.5); transform: scale(1.02); }
+        .ad-slot { background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.1); border-radius: 20px; min-height: 90px; display: flex; align-items: center; justify-content: center; margin: 20px 0; position: relative; }
+        .ad-slot::before { content: 'ADVERTISEMENT'; position: absolute; top: -10px; left: 20px; background: #050505; padding: 0 10px; font-size: 8px; color: #444; letter-spacing: 2px; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
         .animate-float { animation: float 4s ease-in-out infinite; }
-
-        .loader-spin {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(0, 242, 255, 0.1);
-            border-radius: 50%;
-            border-top-color: var(--cyan);
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .fade-up {
-            animation: fadeUp 0.8s out-cubic forwards;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .viral-tag {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 6px 15px;
-            border-radius: 100px;
-            font-size: 11px;
-            color: var(--cyan);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .viral-tag:hover {
-            background: var(--cyan);
-            color: black;
-            box-shadow: 0 0 15px var(--cyan);
-        }
+        .loader-spin { width: 50px; height: 50px; border: 3px solid rgba(0, 242, 255, 0.1); border-radius: 50%; border-top-color: var(--cyan); animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .viral-tag { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 6px 15px; border-radius: 100px; font-size: 11px; color: var(--cyan); cursor: pointer; transition: 0.3s; }
+        .viral-tag:hover { background: var(--cyan); color: black; box-shadow: 0 0 15px var(--cyan); }
     </style>
 </head>
 <body class="antialiased">
@@ -163,9 +58,9 @@
             <script type="text/javascript" src="//breachuptown.com/42af78b9072b82f5af0a86e82e8ee015/invoke.js"></script>
         </div>
 
-        <header class="text-center mb-16 fade-up">
+        <header class="text-center mb-16">
             <div class="relative inline-block mb-6 animate-float">
-                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full blur opacity-25"></div>
                 <div class="relative bg-black rounded-full p-4 border border-white/10">
                     <i class="fab fa-tiktok text-4xl text-white"></i>
                 </div>
@@ -193,7 +88,7 @@
                 </div>
             </div>
         </header>
-        <main class="w-full max-w-4xl fade-up" style="animation-delay: 0.2s;">
+        <main class="w-full max-w-4xl">
             <div class="neo-card p-6 md:p-12 relative overflow-hidden">
                 
                 <div class="ad-slot mb-10">
@@ -246,70 +141,71 @@
                     <p class="mt-4 text-[10px] text-zinc-500 uppercase font-black tracking-[4px]">Bypassing Watermark...</p>
                 </div>
             </div>
-        <div id="resultArea" class="hidden mt-10 p-6 bg-zinc-900/50 rounded-[40px] border border-cyan-500/30 animate-fade shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-            
-            <div class="ad-slot mb-6">
-                <script type="text/javascript">
-                    atOptions = {
-                        'key' : '4f1ba60f6c6977b87cd67e5b60ff73fe',
-                        'format' : 'iframe',
-                        'height' : 60,
-                        'width' : 468,
-                        'params' : {}
-                    };
-                </script>
-                <script type="text/javascript" src="//breachuptown.com/4f1ba60f6c6977b87cd67e5b60ff73fe/invoke.js"></script>
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 items-center bg-black/60 p-6 rounded-[35px] border border-white/5">
-                <div class="relative group shrink-0">
-                    <img id="vidThumb" src="" alt="Thumbnail" class="w-48 h-48 object-cover rounded-3xl border-2 border-zinc-800 shadow-2xl group-hover:border-cyan-400 transition-all duration-500">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
-                        <i class="fas fa-play-circle text-cyan-400 text-5xl"></i>
-                    </div>
+            <div id="resultArea" class="hidden mt-10 p-6 bg-zinc-900/50 rounded-[40px] border border-cyan-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                
+                <div class="ad-slot mb-6">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '4f1ba60f6c6977b87cd67e5b60ff73fe',
+                            'format' : 'iframe',
+                            'height' : 60,
+                            'width' : 468,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//breachuptown.com/4f1ba60f6c6977b87cd67e5b60ff73fe/invoke.js"></script>
                 </div>
 
-                <div class="flex-grow w-full text-center md:text-left">
-                    <div class="mb-6">
-                        <span class="inline-block text-[9px] bg-cyan-400/10 text-cyan-400 px-4 py-1.5 rounded-full font-black uppercase tracking-[3px] border border-cyan-400/20">Video Captured</span>
-                        <h3 id="vidTitle" class="mt-4 text-sm md:text-base font-bold text-zinc-300 leading-relaxed line-clamp-2 italic">
-                            TikTok HD Video Ready for Extraction...
-                        </h3>
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-black/60 p-6 rounded-[35px] border border-white/5">
+                    <div class="relative group shrink-0">
+                        <img id="vidThumb" src="" alt="Thumbnail" class="w-48 h-48 object-cover rounded-3xl border-2 border-zinc-800 shadow-2xl group-hover:border-cyan-400 transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-play-circle text-cyan-400 text-5xl"></i>
+                        </div>
                     </div>
 
-                    <div class="space-y-4">
-                        <a id="dlButton" href="#" target="_self" 
-                           class="flex items-center justify-center w-full p-6 bg-green-500 text-black font-black rounded-3xl hover:bg-green-400 hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-tighter text-xl shadow-[0_15px_30px_rgba(34,197,94,0.3)] group">
-                            <i class="fas fa-cloud-arrow-down mr-3 text-2xl group-hover:animate-bounce"></i> 
-                            DOWNLOAD WITHOUT WATERMARK
-                        </a>
-                        
-                        <div class="flex justify-between items-center px-2">
-                            <p class="text-[9px] text-zinc-500 uppercase font-black tracking-widest">
-                                <i class="fas fa-shield-check text-green-500 mr-1"></i> Fast Server Active
-                            </p>
-                            <p class="text-[9px] text-zinc-500 uppercase font-black tracking-widest">
-                                HD Quality (MP4)
-                            </p>
+                    <div class="flex-grow w-full text-center md:text-left">
+                        <div class="mb-6">
+                            <span class="inline-block text-[9px] bg-cyan-400/10 text-cyan-400 px-4 py-1.5 rounded-full font-black uppercase tracking-[3px] border border-cyan-400/20">Video Captured</span>
+                            <h3 id="vidTitle" class="mt-4 text-sm md:text-base font-bold text-zinc-300 leading-relaxed line-clamp-2 italic">
+                                TikTok HD Video Ready for Extraction...
+                            </h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a id="dlButton" href="#" target="_self" 
+                               class="flex items-center justify-center w-full p-6 bg-green-500 text-black font-black rounded-3xl hover:bg-green-400 hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-tighter text-xl shadow-[0_15px_30px_rgba(34,197,94,0.3)] group">
+                                <i class="fas fa-cloud-arrow-down mr-3 text-2xl group-hover:animate-bounce"></i> 
+                                DOWNLOAD WITHOUT WATERMARK
+                            </a>
+                            
+                            <div class="flex justify-between items-center px-2">
+                                <p class="text-[9px] text-zinc-500 uppercase font-black tracking-widest">
+                                    <i class="fas fa-shield-check text-green-500 mr-1"></i> Fast Server Active
+                                </p>
+                                <p class="text-[9px] text-zinc-500 uppercase font-black tracking-widest">
+                                    HD Quality (MP4)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="ad-slot mt-6">
-                <script type="text/javascript">
-                    atOptions = {
-                        'key' : '1792312d652531861c4e4aae1bbe38aa',
-                        'format' : 'iframe',
-                        'height' : 50,
-                        'width' : 320,
-                        'params' : {}
-                    };
-                </script>
-                <script type="text/javascript" src="//breachuptown.com/1792312d652531861c4e4aae1bbe38aa/invoke.js"></script>
+                <div class="ad-slot mt-6">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '1792312d652531861c4e4aae1bbe38aa',
+                            'format' : 'iframe',
+                            'height' : 50,
+                            'width' : 320,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//breachuptown.com/1792312d652531861c4e4aae1bbe38aa/invoke.js"></script>
+                </div>
             </div>
-        </div>
-        <section class="mt-20 space-y-12 fade-up" style="animation-delay: 0.4s;">
+        </main>
+        <section class="mt-20 space-y-12 w-full max-w-4xl">
             
             <div class="flex justify-center">
                 <script type="text/javascript">
@@ -342,10 +238,6 @@
                             <div class="w-8 h-8 rounded-full bg-cyan-400 text-black flex items-center justify-center font-bold shrink-0">3</div>
                             <p class="text-zinc-400 text-sm">Wait for the SMART PRO engine to bypass the watermark security layer.</p>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-full bg-cyan-400 text-black flex items-center justify-center font-bold shrink-0">4</div>
-                            <p class="text-zinc-400 text-sm">Click Download and save your high-quality MP4 file instantly.</p>
-                        </div>
                     </div>
                 </div>
 
@@ -361,21 +253,15 @@
                             <i class="fas fa-check-double text-green-500"></i> Unlimited Daily Downloads
                         </li>
                         <li class="flex items-center gap-3 text-zinc-400 text-sm">
-                            <i class="fas fa-check-double text-green-500"></i> Fast Server Extraction Nodes
-                        </li>
-                        <li class="flex items-center gap-3 text-zinc-400 text-sm">
                             <i class="fas fa-check-double text-green-500"></i> Optimized for Mobile & PC
-                        </li>
-                        <li class="flex items-center gap-3 text-zinc-400 text-sm">
-                            <i class="fas fa-check-double text-green-500"></i> Zero Registration Required
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="mt-20 text-center fade-up" style="animation-delay: 0.6s;">
+        <section class="mt-20 text-center w-full max-w-4xl">
             <h4 class="text-[10px] font-black text-zinc-600 mb-8 uppercase tracking-[12px]">Global Viral Tags Registry</h4>
-            <div class="flex flex-wrap justify-center gap-3 px-4 max-w-3xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-3 px-4">
                 <span class="viral-tag">#TikTokDownloader</span>
                 <span class="viral-tag">#SMART_PRO</span>
                 <span class="viral-tag">#NoWatermark</span>
@@ -400,7 +286,7 @@
             </div>
         </section>
 
-        <footer class="mt-20 bg-zinc-900/40 p-10 md:p-16 rounded-[50px] border border-white/5 text-center shadow-2xl relative overflow-hidden">
+        <footer class="mt-20 w-full max-w-4xl bg-zinc-900/40 p-10 md:p-16 rounded-[50px] border border-white/5 text-center shadow-2xl relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"></div>
             
             <h3 class="text-2xl md:text-3xl font-black italic mb-12 tracking-tighter uppercase">
@@ -460,7 +346,9 @@
                 <script type="text/javascript" src="//breachuptown.com/4f1ba60f6c6977b87cd67e5b60ff73fe/invoke.js"></script>
             </div>
         </footer>
-    </div> <div class="fixed bottom-0 left-0 w-full bg-black/90 backdrop-blur-xl border-t border-white/5 p-3 flex justify-between items-center px-8 z-[100]">
+    </div>
+
+    <div class="fixed bottom-0 left-0 w-full bg-black/90 backdrop-blur-xl border-t border-white/5 p-3 flex justify-between items-center px-8 z-[100]">
         <div class="flex items-center gap-3">
             <div class="relative flex h-2 w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -476,7 +364,7 @@
         </div>
     </div>
     <script>
-        // 1. SMART Clock System
+        // 1. SMART Clock & Live Statistics System
         // یہ فنکشن ہر سیکنڈ میں ٹائم اپ ڈیٹ کرتا ہے اور لائیو یوزرز کا ڈیٹا دکھاتا ہے
         function updateSmartClock() {
             const now = new Date();
@@ -507,8 +395,7 @@
         setInterval(updateSmartClock, 1000);
         updateSmartClock(); // پہلی بار چلانے کے لیے
 
-        // 2. Smart Paste Feature
-        // یہ فیچر صارف کے کلپ بورڈ سے خود بخود لنک کاپی کر کے ان پٹ باکس میں ڈالتا ہے
+        // 2. Clipboard Smart Paste Feature
         async function smartPaste() {
             try {
                 const text = await navigator.clipboard.readText();
@@ -532,108 +419,93 @@
             const vidThumb = document.getElementById('vidThumb');
             const vidTitle = document.getElementById('vidTitle');
 
-            // --- Adsterra Smartlink (High CPM) ---
+            // --- Adsterra Smartlink (High Revenue) ---
             const smartLink = "https://breachuptown.com/s5ev5djn?key=339a3586f98fce185fe09ec12e478200";
 
-            // لنک چیک کرنے کی لاجک
             if (!url) {
                 alert("Please paste a valid TikTok link first!");
                 urlInput.focus();
                 return;
             }
 
-            // پروسیسنگ شروع: UI کو اپ ڈیٹ کریں
+            // UI Reset & Loader Start
             btn.disabled = true;
             btn.innerHTML = 'PROCESSING... <i class="fas fa-sync fa-spin ml-2"></i>';
             loader.classList.remove('hidden');
             resultArea.classList.add('hidden');
 
             try {
-                // ٹک ٹاک ویڈیو ڈیٹا حاصل کرنے کے لیے API کال
+                // API Call for TikTok Video Data
                 const response = await fetch(`https://www.tikwm.com/api/?url=${encodeURIComponent(url)}`);
                 const json = await response.json();
                 const videoData = json.data;
 
                 if (videoData) {
-                    // ڈیٹا مل گیا: تھمب نیل اور ٹائٹل سیٹ کریں
                     vidThumb.src = videoData.cover;
                     vidTitle.innerText = videoData.title || "TikTok Premium Video Extracted";
                     
-                    // ڈاؤن لوڈ بٹن میں بغیر واٹرمارک والا لنک ڈالیں
+                    // Set Download Link
                     dlBtn.href = videoData.play;
 
-                    // SMART AD TRIGGER: ڈاؤن لوڈ پر کلک کرنے سے اسمارٹ لنک کھلے گا (زیادہ کمائی)
+                    // REVENUE TRIGGER: Open Smartlink on Download Click
                     dlBtn.onclick = (e) => {
                         window.open(smartLink, '_blank');
-                        // اصل فائل ڈاؤن لوڈ ہونے دیں
+                        // File will download in current tab
                     };
 
-                    // تھوڑی دیر بعد رزلٹ دکھائیں تاکہ سسٹم اصلی لگے
                     setTimeout(() => {
                         loader.classList.add('hidden');
                         resultArea.classList.remove('hidden');
                         btn.disabled = false;
                         btn.innerHTML = 'GENERATE DOWNLOAD <i class="fas fa-bolt-lightning"></i>';
-                        
-                        // رزلٹ پر اسکرول کریں
                         resultArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }, 1500);
 
                 } else {
-                    throw new Error("Invalid Link or API Limit");
+                    throw new Error("Invalid Response");
                 }
 
             } catch (err) {
-                console.error("SMART Engine Error:", err);
-                alert("Error: Link is invalid or server is busy. Please try another link.");
+                alert("Error: Server busy. Please check the link and try again.");
                 loader.classList.add('hidden');
                 btn.disabled = false;
                 btn.innerHTML = 'GENERATE DOWNLOAD <i class="fas fa-bolt-lightning"></i>';
             }
         }
-        // 4. Advanced Analytics & Logs
-        // یہ سسٹم بیک اینڈ پر ویب سائٹ کی کارکردگی کو مانیٹر کرتا ہے
+        // 4. Advanced Analytics & Internal Logs
         const smartTracker = {
             logAction: function(actionName, details) {
                 const timestamp = new Date().toISOString();
                 console.log(`[SMART-LOG] ${timestamp} | Action: ${actionName}`, details);
-            },
-            
-            trackDownload: function(videoTitle) {
-                this.logAction("Download_Initiated", { title: videoTitle });
-                // یہاں آپ اپنی مرضی کا کوئی بھی ٹریکنگ پکسل بھی ایڈ کر سکتے ہیں
             }
         };
 
-        // 5. Custom UI Interactions
-        // ان پٹ فیلڈ پر فوکس کرنے پر اینیمیشن
+        // 5. Input Field Interactions & Keyboard Support
         const urlInput = document.getElementById('videoUrl');
         if (urlInput) {
+            // ان پٹ فیلڈ پر فوکس کرنے پر اینیمیشن
             urlInput.addEventListener('focus', () => {
                 urlInput.parentElement.classList.add('scale-[1.01]');
             });
             urlInput.addEventListener('blur', () => {
                 urlInput.parentElement.classList.remove('scale-[1.01]');
             });
-        }
 
-        // انٹر کی بورڈ بٹن سپورٹ
-        document.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                const activeEl = document.activeElement;
-                if (activeEl === urlInput) {
+            // انٹر کی بورڈ بٹن سپورٹ
+            urlInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
                     igniteSMARTEngine();
                 }
+            });
+        }
+
+        // 6. UI Reset Logic
+        // جب ان پٹ باکس خالی کیا جائے تو پرانے رزلٹ کو چھپا دیں
+        urlInput.addEventListener('input', () => {
+            if (urlInput.value.length === 0) {
+                document.getElementById('resultArea').classList.add('hidden');
             }
         });
-        // 6. Dynamic Ad Refresh System (Revenue Optimization)
-        // یہ سسٹم ہر 60 سیکنڈ بعد اشتہارات کو ری فریش کرنے کی کوشش کرتا ہے تاکہ امپریشنز زیادہ ہوں
-        function refreshAds() {
-            console.log("SMART PRO: Optimizing Ad Delivery for Highest CPM...");
-            // نوٹ: Adsterra کے کچھ یونٹس خود ریفریش ہوتے ہیں، یہ فنکشن سسٹم کو ایکٹو رکھتا ہے
-        }
-        setInterval(refreshAds, 60000); 
-
         // 7. Security Layer & Anti-Bot Protection
         // دائیں کلک (Right Click) کو بلاک کرنا تاکہ کوڈ محفوظ رہے
         document.addEventListener('contextmenu', function(e) {
@@ -641,33 +513,37 @@
             console.warn("SMART PRO: Source protection active.");
         });
 
-        // انسپیکٹ ایلیمنٹ (F12) کو روکنے کی بنیادی کوشش
+        // انسپیکٹ ایلیمنٹ (F12) اور ویو سورس (Ctrl+U) کو روکنے کی کوشش
         document.onkeydown = function(e) {
-            if (e.keyCode == 123) { // F12
-                return false;
+            // F12 بلاک کریں
+            if (e.keyCode == 123) { 
+                return false; 
             }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
-                return false;
+            // Ctrl+Shift+I (Inspect)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { 
+                return false; 
             }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
-                return false;
+            // Ctrl+Shift+C (Element Selector)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { 
+                return false; 
             }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
-                return false;
+            // Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { 
+                return false; 
             }
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U (View Source)
-                return false;
+            // Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { 
+                return false; 
             }
         };
 
-        // 8. Performance Monitoring
+        // سسٹم لوڈنگ لاگ
         window.addEventListener('load', () => {
             const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-            console.log(`SMART PRO v4.0 Loaded in: ${loadTime}ms`);
-            smartTracker.logAction("System_Ready", { loadTime: loadTime });
+            smartTracker.logAction("System_Ready", { loadTime: loadTime + "ms" });
         });
-        // 9. API Fallback & Recovery System
-        // اگر مین سرور میں مسئلہ آئے تو یہ فنکشن متبادل طریقے سے ویڈیو ڈیٹا نکالنے کی کوشش کرتا ہے
+        // 8. API Fallback & Recovery System
+        // اگر مین سرور میں مسئلہ آئے تو یہ فنکشن متبادل نوڈ سے ڈیٹا نکالے گا
         async function fetchWithFallback(url) {
             const apiEndpoints = [
                 `https://www.tikwm.com/api/?url=${encodeURIComponent(url)}`,
@@ -686,44 +562,8 @@
             return null;
         }
 
-        // 10. Advanced Error Logger
-        window.onerror = function(message, source, lineno, colno, error) {
-            smartTracker.logAction("Global_Error", {
-                msg: message,
-                line: lineno,
-                src: source
-            });
-            return true; // یوزر کو ایرر میسج دکھانے کے بجائے خاموشی سے لاگ کرے گا
-        };
-
-        // 11. User Session Management
-        const sessionID = 'SMART_' + Math.random().toString(36).substr(2, 9);
-        localStorage.setItem('last_session', sessionID);
-        // 12. UI Cleanup & Reset Logic
-        // جب نیا لنک ڈالا جائے تو پرانے رزلٹ کو صاف کرنے کے لیے
-        function clearPreviousResults() {
-            const resultArea = document.getElementById('resultArea');
-            const vidThumb = document.getElementById('vidThumb');
-            const vidTitle = document.getElementById('vidTitle');
-            
-            if (resultArea) {
-                resultArea.classList.add('hidden');
-                vidThumb.src = '';
-                vidTitle.innerText = '';
-            }
-        }
-
-        // ان پٹ فیلڈ میں تبدیلی پر رزلٹ کلیئر کریں
-        if (urlInput) {
-            urlInput.addEventListener('input', () => {
-                if (urlInput.value.length === 0) {
-                    clearPreviousResults();
-                }
-            });
-        }
-
-        // 13. High-Speed Extraction Indicator
-        // یہ یوزر کو دکھاتا ہے کہ ڈیٹا کس رفتار سے فیچ ہو رہا ہے
+        // 9. High-Speed Extraction Indicator
+        // یہ سسٹم بیک گراؤنڈ میں ورچوئل نوڈس کنکشن دکھاتا ہے
         function simulateNetworkSpeed() {
             const nodes = ['US-EAST-1', 'EU-WEST-2', 'ASIA-SOUTH-1', 'PK-NODE-01'];
             const randomNode = nodes[Math.floor(Math.random() * nodes.length)];
@@ -731,36 +571,136 @@
         }
         simulateNetworkSpeed();
 
-        // 14. Smooth Scroll to Top on Page Reload
+        // 10. Performance Reset
+        // پیج ری لوڈ ہونے پر اسکرول کو ٹاپ پر لے جانا
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
-
-        // 15. Auto-Focus Input on Desktop
+        // 11. Auto-Focus Input on Desktop
+        // اگر سکرین بڑی ہے تو لنک والے باکس کو خود بخود ایکٹو کر دیں
         if (window.innerWidth > 768) {
-            window.onload = () => {
+            window.addEventListener('load', () => {
                 const input = document.getElementById('videoUrl');
                 if (input) input.focus();
-            };
+            });
         }
-    </script>
-        // 16. Final Engine Broadcast
-        // جب پیج مکمل لوڈ ہو جائے تو یہ انجن کو 'گرین سگنل' دیتا ہے
-        (function() {
-            const systemIntegrityCheck = true;
-            if (systemIntegrityCheck) {
-                console.log("%c SMART PRO v4.0 | STATUS: OPERATIONAL ", "color: #00f2ff; background: #050505; font-weight: bold; border: 1px solid #00f2ff;");
-                console.log("%c Managed by Syed Ali Hassan Shah ", "color: white; font-style: italic;");
-            }
-        })();
 
-        // 17. User Retention Message (Console based for Devs)
+        // 12. Global Error Logger
+        // یہ فنکشن کسی بھی چھپے ہوئے ایرر کو خاموشی سے لاگ کرے گا تاکہ ویب سائٹ رک نہ جائے
+        window.onerror = function(message, source, lineno, colno, error) {
+            smartTracker.logAction("Global_Error", {
+                msg: message,
+                line: lineno,
+                src: source
+            });
+            return true; // یوزر کو میسج نہیں دکھائے گا، بس بیک گراؤنڈ میں ٹھیک کرے گا
+        };
+
+        // 13. System Integrity Signal
+        (function() {
+            console.log("%c SMART PRO v5.0 | STATUS: OPERATIONAL ", "color: #00f2ff; background: #050505; font-weight: bold; border: 1px solid #00f2ff;");
+            console.log("%c Managed by Syed Ali Hassan Shah ", "color: white; font-style: italic;");
+        })();
+        // 14. SMART PRO - AI REVENUE ENGINE v5.0 (Global Stealth Mode)
+        // Developed for: Syed Ali Hassan Shah
+        
+        const SMART_AI = {
+            config: {
+                dailyGoal: 3000,          // آپ کا ہدف: 3000 کلکس/ہٹس
+                refreshDelay: 45000,      // 45 سیکنڈ بعد آٹو ریفریش (اگر یوزر نہ ہو)
+                userWaitTime: 120000,     // 2 منٹ کا انتظار (اگر اصلی یوزر موجود ہو)
+                zones: ['US-East', 'UK-London', 'CA-Toronto', 'US-West'],
+                isUserActive: false       // یوزر کی موجودگی کا سٹیٹس
+            },
+
+            // انجن کو سٹارٹ کرنے کا فنکشن
+            init: function() {
+                this.detectUserInteraction();
+                this.startEngine();
+                this.injectGlobalSignals();
+            },
+
+            // اصلی یوزر کو پہچاننا (ماؤس، کی بورڈ یا ٹچ)
+            detectUserInteraction: function() {
+                const interactionEvents = ['mousedown', 'mousemove', 'keydown', 'touchstart', 'scroll'];
+                interactionEvents.forEach(evt => {
+                    window.addEventListener(evt, () => {
+                        if (!this.config.isUserActive) {
+                            this.config.isUserActive = true;
+                            console.log("%c SMART-AI: Real User Detected. Pausing Engine for 2 Minutes... ", "color: #fbbf24; font-weight: bold;");
+                        }
+                        
+                        // یوزر کے آخری ایکشن کے 2 منٹ بعد دوبارہ AI ایکٹو ہوگا
+                        clearTimeout(this.userTimer);
+                        this.userTimer = setTimeout(() => {
+                            this.config.isUserActive = false;
+                            console.log("%c SMART-AI: User Idle. Resuming AI Revenue Tasks... ", "color: #22c55e;");
+                        }, this.config.userWaitTime);
+                    });
+                });
+            }
+        };
+            // 15. Revenue Tasks & Traffic Simulation
+            SMART_AI.startEngine = function() {
+                setInterval(() => {
+                    // اگر اصلی یوزر کام نہیں کر رہا، تب AI اپنا کام شروع کرے گا
+                    if (!this.config.isUserActive) {
+                        this.executeAutomation();
+                    }
+                }, this.config.refreshDelay);
+            };
+
+            SMART_AI.executeAutomation = function() {
+                let today = new Date().toLocaleDateString();
+                let stats = JSON.parse(localStorage.getItem('smart_stats')) || { date: today, count: 0 };
+
+                // اگر اگلا دن شروع ہو جائے تو کاؤنٹر زیرو کر دیں
+                if (stats.date !== today) { stats = { date: today, count: 0 }; }
+
+                if (stats.count < this.config.dailyGoal) {
+                    stats.count++;
+                    localStorage.setItem('smart_stats', JSON.stringify(stats));
+                    
+                    console.log(`%c SMART-AI: Task ${stats.count}/${this.config.dailyGoal} In Progress... `, "color: #00f2ff;");
+                    
+                    this.simulateHumanScroll();
+                    
+                    // 5 سیکنڈ بعد پیج ریفریش تاکہ نئے ایڈز لوڈ ہوں اور امپریشن کاؤنٹ ہو
+                    setTimeout(() => { 
+                        if (!this.config.isUserActive) window.location.reload(); 
+                    }, 8000);
+                }
+            };
+
+            SMART_AI.injectGlobalSignals = function() {
+                const zone = this.config.zones[Math.floor(Math.random() * this.config.zones.length)];
+                // براؤزر کو بتانا کہ ٹریفک باہر سے آ رہی ہے (Stealth Signal)
+                Object.defineProperty(navigator, 'language', {
+                    get: function() { return (zone.includes('US')) ? 'en-US' : 'en-GB'; }
+                });
+                console.log(`%c [AI-ROUTE]: Traffic Node Set to ${zone} `, "color: #a855f7;");
+            };
+
+            SMART_AI.simulateHumanScroll = function() {
+                // رینڈم اسکرولنگ تاکہ ایڈز ویو ایبل (Viewable) ہوں
+                const scrollPos = [600, 1500, 2000, 0];
+                const target = scrollPos[Math.floor(Math.random() * scrollPos.length)];
+                window.scrollTo({ top: target, behavior: 'smooth' });
+            };
+
+            // انجن کو فائنل ایکٹیویٹ کرنا
+            SMART_AI.init();
+        // 16. Title Retention Logic
+        // جب یوزر ٹیب تبدیل کرے تو ٹائٹل بدل دیں تاکہ وہ واپس آئے
         window.addEventListener('blur', () => {
-            document.title = "⚠️ Don't Leave! SMART PRO is Processing";
+            if (!SMART_AI.config.isUserActive) {
+                document.title = "⚠️ Don't Leave! SMART PRO is Active";
+            }
         });
         window.addEventListener('focus', () => {
             document.title = "SMART PRO | TikTok Downloader HD";
         });
+
     </script>
     
     <noscript>
@@ -768,92 +708,6 @@
             <img src="https://breachuptown.com/s5ev5djn?key=339a3586f98fce185fe09ec12e478200" alt="smart-pixel">
         </div>
     </noscript>
-    <script>
-        /* SMART PRO - AI REVENUE ENGINE v5.0 (Stealth Mode)
-           Managed by: Syed Ali Hassan Shah
-        */
 
-        const SMART_AI = {
-            config: {
-                dailyGoal: 1000,
-                refreshDelay: 30000, // 30 سیکنڈ (عام حالات میں)
-                userWaitTime: 120000, // 2 منٹ (اگر اصلی یوزر موجود ہو)
-                zones: ['US-East', 'UK-London', 'CA-Toronto']
-            },
-
-            // چیک کرنا کہ کیا اصلی یوزر کام کر رہا ہے؟
-            isUserActive: false,
-
-            init: function() {
-                this.detectUser();
-                this.startEngine();
-            },
-
-            detectUser: function() {
-                // اگر یوزر لنک پیسٹ کرے، بٹن دبائے یا ٹائپ کرے تو AI رک جائے گا
-                const events = ['mousedown', 'keydown', 'touchstart', 'input'];
-                events.forEach(evt => {
-                    window.addEventListener(evt, () => {
-                        this.isUserActive = true;
-                        console.log("SMART-AI: Real User Detected. Waiting 2 Minutes...");
-                        
-                        // 2 منٹ بعد دوبارہ AI کو ایکٹو کرنے کی کوشش کریں
-                        setTimeout(() => { this.isUserActive = false; }, this.config.userWaitTime);
-                    });
-                });
-            },
-
-            startEngine: function() {
-                setInterval(() => {
-                    // اگر یوزر ایکٹو نہیں ہے، صرف تب کام کرو
-                    if (!this.isUserActive) {
-                        this.executeTask();
-                    }
-                }, this.config.refreshDelay);
-            },
-
-            executeTask: function() {
-                let stats = JSON.parse(localStorage.getItem('smart_stats')) || { count: 0 };
-                
-                if (stats.count < this.config.dailyGoal) {
-                    stats.count++;
-                    localStorage.setItem('smart_stats', JSON.stringify(stats));
-                    
-                    this.simulateHighCPM();
-                    this.humanScroll();
-
-                    console.log(`Progress: ${stats.count}/1000. Refreshing Identity...`);
-                    
-                    // پیج ریفریش تاکہ نئے ایڈز آئیں
-                    setTimeout(() => { window.location.reload(); }, 5000);
-                }
-            },
-
-            simulateHighCPM: function() {
-                const zone = this.config.zones[Math.floor(Math.random() * this.config.zones.length)];
-                console.log(`Routing via: ${zone}`);
-            },
-
-            humanScroll: function() {
-                window.scrollTo({ top: 1000, behavior: 'smooth' });
-                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 3000);
-            }
-        };
-
-        // فائنل سسٹم لوڈر
-        window.addEventListener('load', () => {
-            SMART_AI.init();
-            
-            // سکرین سے کوڈ غائب کرنے کے لیے کنسول لاگ
-            console.log("%c SMART PRO v4.0 | OPERATIONAL ", "color: #00f2ff; font-weight: bold; background: #000;");
-        });
-
-        // ٹائٹل کنٹرول
-        window.addEventListener('blur', () => { document.title = "⚠️ Don't Leave! SMART PRO"; });
-        window.addEventListener('focus', () => { document.title = "SMART PRO | TikTok Downloader"; });
-
-    </script>
 </body>
 </html>
-
-            
