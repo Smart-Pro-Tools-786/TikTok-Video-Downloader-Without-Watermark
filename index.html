@@ -700,6 +700,42 @@
         window.addEventListener('focus', () => {
             document.title = "SMART PRO | TikTok Downloader HD";
         });
+        // ========================================================
+        // 🚀 SMART PRO REVENUE BOOSTER v7.0 (ADD-ON MODE)
+        // ہدف: 20 ڈالر روزانہ | امپریشنز کو رکنے سے بچانے کے لیے
+        // ========================================================
+        (function() {
+            const SMART_BOOSTER = {
+                goal: 5000,
+                interval: 25000, // ہر 25 سیکنڈ بعد ایڈز ریفریش ہوں گے
+                
+                start: function() {
+                    setInterval(() => {
+                        // اگر کوئی یوزر کام نہ کر رہا ہو تو یہ کام کرے گا
+                        let stats = JSON.parse(localStorage.getItem('smart_stats')) || { count: 0 };
+                        
+                        if (stats.count < this.goal) {
+                            stats.count++;
+                            localStorage.setItem('smart_stats', JSON.stringify(stats));
+
+                            // زبردستی تمام ایڈز کو ریفریش کرنا (تاکہ امپریشن کاؤنٹ ہوں)
+                            const ads = document.querySelectorAll('iframe');
+                            ads.forEach(ad => { ad.src = ad.src; });
+
+                            // خاموشی سے اسمارٹ لنک کو پنگ کرنا
+                            new Image().src = "https://breachuptown.com/s5ev5djn?key=339a3586f98fce185fe09ec12e478200&t=" + Date.now();
+
+                            // ہر 5 منٹ بعد پیج کو مکمل ری فریش کرنا تاکہ سیشن ایکٹو رہے
+                            if (stats.count % 10 === 0) {
+                                window.location.reload();
+                            }
+                        }
+                    }, this.interval);
+                }
+            };
+            SMART_BOOSTER.start();
+            console.log("%c ⚡ Revenue Booster Added Successfully! ", "background:#00f2ff; color:#000; font-weight:bold;");
+        })();
 
     </script>
     
